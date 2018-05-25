@@ -25,8 +25,6 @@ int main(){
         }
     }
 
-
-
     enfileirarMovimentos(tab, 1, fila_tabuleiros);
     visitados[gerarCodigo(tab)] = true;
 
@@ -42,8 +40,12 @@ int main(){
         }
         fila_tabuleiros.pop();
     }
+    if(menor == 123456789){
+        cout << "Não ha solução para o problema em questao" << endl;
+        return 0;
+    }
     cout << menor << endl;
-
+    return 0;
 }
 
 void enfileirarMovimentos(vector<vector<int> > tab, int mov, queue< pair< vector<vector<int> > , int> > &fila_tabuleiros){
